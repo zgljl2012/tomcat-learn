@@ -1,10 +1,12 @@
-package com.zgljl2012.tomcat;
+package com.zgljl2012.tomcat.http;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
@@ -12,13 +14,21 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletInputStream;
 import javax.servlet.ServletRequest;
 
-public class Request implements ServletRequest {
+import com.zgljl2012.tomcat.util.ParameterMap;
+
+public class HttpRequest implements ServletRequest {
 	
 	private InputStream input;
 	
 	private String uri;
 	
-	public Request(InputStream input) {
+	protected HashMap headers = new HashMap<>();
+	
+	protected ArrayList cookies = new ArrayList();
+	
+	protected ParameterMap parameters = null;
+	
+	public HttpRequest(InputStream input) {
 		this.input = input;
 	}
 	
@@ -199,5 +209,4 @@ public class Request implements ServletRequest {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
 }

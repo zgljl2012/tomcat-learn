@@ -20,7 +20,6 @@ public class PrimitiveServlet implements Servlet {
 	}
 
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-		System.out.println("from service");
 		PrintWriter out = res.getWriter();
 		out.println("Hello, This is Tomcat");
 	}
