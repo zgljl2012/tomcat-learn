@@ -1,4 +1,4 @@
-package com.zgljl2012.tomcat;
+package com.zgljl2012.tomcat.connector.http;
 
 public class Constants {
 	

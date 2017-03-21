@@ -1,4 +1,4 @@
-package com.zgljl2012.tomcat.http;
+package com.zgljl2012.tomcat.connector.http;
 
 public final class HttpRequestLine {
  
